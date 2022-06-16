@@ -1,0 +1,29 @@
+@mixin response($edge) {
+    @if $edge == smallPhone {
+        @media only screen and (max-width: 450px) { @content };
+    }
+
+    @if $edge == phone {
+        @media only screen and (max-width: 600px) { @content };
+    }
+
+    @if $edge == bigPhone {
+        @media only screen and (max-width: 639px) { @content };
+    }
+
+    @if $edge == tabPort {
+        @media only screen and (max-width: 900px) { @content };
+    }
+
+    @if $edge == tabLand {
+        @media only screen and (max-width: 1400px) { @content };
+    }
+
+    @if $edge == desktop {
+        @media only screen and (max-width: 1799px) { @content };
+    }
+
+    @if $edge == bigDesktop {
+        @media only screen and (min-width: 1800px) { @content };
+    }
+}

@@ -1,0 +1,91 @@
+@import 'media';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    @include response(bigDesktop) {
+        font-size: 125%; //20px=1rem; 20/16=125%
+    }
+
+    @include response(desktop) {
+        font-size: 112.5%; //18px=1rem; 18/16=112.5%
+    }
+
+    @include response(tabLand) {
+        font-size: 56,25%; //9px=1rem; 9/16 = 56,25%
+    }
+
+    @include response(tabPort) {
+        font-size: 50%; //8px=1rem; 8/16=50%
+    }
+
+    @include response(phone) {
+        font-size: 43.75%; //7px=1rem; 7/16=43.75%
+    }
+
+    @include response(smallPhone) {
+        font-size: 31.25%; //5px=1rem; 5/16=31.25%
+    }
+}
+
+body {
+    background-image: url(../images/snow.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.countdown_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .countdown_el {
+        text-align: center;
+
+        span {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.big_text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+}
+
+footer {
+    margin-top: auto;
+
+    .close {
+        padding: 0.3rem 0;
+        font-weight: bold;
+
+        a {
+            transition: 0.27s;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: darkorange
+        }
+    }
+}
