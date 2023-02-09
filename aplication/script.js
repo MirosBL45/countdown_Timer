@@ -3,7 +3,7 @@ const hoursElement = document.getElementById('hours');
 const minsElement = document.getElementById('mins');
 const secondsElement = document.getElementById('seconds');
 
-const newYear = '1 Jan 2023';
+const newYear = '1 Jan 2024';
 
 function countdownToNY() {
     const dateOfNewYear = new Date(newYear);
